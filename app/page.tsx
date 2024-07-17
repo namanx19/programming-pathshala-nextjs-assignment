@@ -68,7 +68,7 @@ export const marketingContent = [
 
 export default function Home() {
   return (
-    <div className="space-y-10">
+    <div className="space-y-10 dark:bg-background">
       {/* Our Clients Section*/}
       <section className="px-20 md:px-36 space-y-4">
         <div className="text-center space-y-2">
@@ -267,7 +267,7 @@ export default function Home() {
       </section>
 
       {/* Book A Demo */}
-      <section className="text-center bg-neutral-silver mt-5 py-12">
+      <section className="text-center bg-neutral-silver mt-5 py-12 dark:text-white">
         <h1 className="font-bold text-6xl w-full">
           Pellentesque suscipit
           <br />

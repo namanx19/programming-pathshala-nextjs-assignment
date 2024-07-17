@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { useThemeStore } from "@/providers/ThemeProvider";
 
 const SocialIcon = ({ imgUrl }: { imgUrl: string }) => {
   return (
@@ -41,6 +42,7 @@ export const footerLinks = [
 ];
 
 export default function Footer() {
+  const { theme } = useThemeStore((state) => state);
   return (
     <section className="md:px-28 px-16 flex lg:flex-row flex-col lg:justify-between justify-center md:items-center items-start py-12 lg:gap-3 gap-5 bg-neutral-black text-white">
       <div className="space-y-10">
@@ -48,8 +50,8 @@ export default function Footer() {
           <Image src="/logo_icon.svg" width={35} height={24} alt="logo" />
           <span className="my-auto font-bold text-4xl">Nexcent</span>
         </Link>
-        <div className="text-neutral-silver text-sm">
-          <p>Copyright © 2020 Nexcent ltd.</p>
+        <div className="text-neutral-silver dark:text-neutral-grey text-sm">
+          <p>Copyright © 2024 Nexcent ltd.</p>
           <p className="mt-2">All rights reserved</p>
         </div>
         <div className="flex justify-start items-start gap-3">

@@ -1,11 +1,11 @@
 import Image from "next/image";
-type StatsCardProps = {
+type CounterCardProps = {
   imgUrl: string;
   value: number;
   title: string;
 };
 
-function CounterCard({ imgUrl, value, title }: StatsCardProps) {
+function CounterCard({ imgUrl, value, title }: CounterCardProps) {
   return (
     <div className="flex items-center gap-3">
       <Image src={imgUrl} width={48} height={48} alt={title} />
