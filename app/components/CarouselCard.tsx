@@ -18,11 +18,9 @@ const CarouselCard: React.FC<CarouselCardProps> = ({
 
   return (
     <div
-      className="flex items-center justify-evenly p-4"
-      style={{
-        backgroundColor: theme === "light" ? "bg-white" : "bg-background",
-        color: theme === "light" ? "black" : "white",
-      }}
+      className={`flex items-center justify-evenly p-4 ${
+        theme === "light" ? "bg-neutral-silver" : "bg-[#08121C]"
+      } ${theme === "light" ? "text-black" : "text-white"}`}
     >
       <div>
         <h2 className="text-4xl font-bold">{text}</h2>

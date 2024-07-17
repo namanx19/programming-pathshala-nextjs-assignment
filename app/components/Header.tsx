@@ -59,7 +59,7 @@ function Header() {
           <ul className="flex space-x-[50px]">
             {navLinks.map((item) => (
               <li key={item.name}>
-                <Link href={`${item.route}`} className="hover:text-green-600">
+                <Link href={`${item.route}`} className="hover:text-green-600 duration-300">
                   {item.name}
                 </Link>
               </li>
@@ -105,7 +105,7 @@ function Header() {
                         <li key={item.name}>
                           <Link
                             href={`#${item.route}`}
-                            className="hover:text-green-600"
+                            className="hover:text-green-600 duration-300"
                           >
                             {item.name}
                           </Link>
