@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Card from "./components/Card";
+import Card from "./components/FeatureCard";
 import { Button } from "@/components/ui/button";
-import StatCard from "./components/StatCard";
-import BlogCard from "./components/BlogCard";
+import StatCard from "./components/CounterCard";
+import BlogCard from "./components/UserCard";
 
 const cardContent = [
   {
