@@ -41,11 +41,10 @@ To set up the project locally, follow these steps:
     <td> <h3>Dark Mode</h3></td>
   </tr>
   <tr>
-    <td> <img src="https://github.com/user-attachments/assets/14618565-656f-494f-b6c4-06df176dd3b2" alt="Light Mode" width="auto" height="auto"> </td>
-    <td> <img src="https://github.com/user-attachments/assets/77df3c06-61d7-46a4-aa1e-15d2c2ba7d66" alt="Dark Mode" width="auto" height="auto"> </td>
+    <td> <img src="https://github.com/user-attachments/assets/f010b994-144a-4f02-82da-069b57ee047c" alt="Light Mode" width="auto" height="auto"> </td>
+    <td> <img src="https://github.com/user-attachments/assets/0a368684-e639-4e8c-a9c5-61ba921254e2" alt="Dark Mode" width="auto" height="auto"> </td>
   </tr>
 </table>
-
 
 
 
