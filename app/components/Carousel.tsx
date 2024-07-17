@@ -26,13 +26,15 @@ function Carousel() {
   const [startX, setStartX] = useState<number | null>(null);
 
   const handleMouseDown = useCallback((e: React.MouseEvent) => {
-    e.currentTarget.style.cursor = "grabbing";
+    const target = e.currentTarget as HTMLElement;
+    target.style.cursor = "grabbing";
     setIsDragging(true);
     setStartX(e.clientX);
   }, []);
 
   const handleMouseUp = useCallback((e: React.MouseEvent) => {
-    e.currentTarget.style.cursor = "default";
+    const target = e.currentTarget as HTMLElement;
+    target.style.cursor = "default";
     setIsDragging(false);
     setStartX(null);
   }, []);
