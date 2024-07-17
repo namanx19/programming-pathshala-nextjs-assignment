@@ -61,7 +61,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="flex lg:flex-nowrap flex-wrap justify-between gap-10 min-w-96">
-        <div className="flex flex-rop gap-8">
+        <div className="flex sm:flex-row gap-8 flex-col">
           {footerLinks.map((items) => (
             <div className="flex flex-col gap-3 min-w-40" key={items.title}>
               <h5 className="font-semibold">{items.title}</h5>

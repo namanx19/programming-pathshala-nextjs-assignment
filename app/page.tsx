@@ -3,7 +3,7 @@ import Card from "./components/FeatureCard";
 import { Button } from "@/components/ui/button";
 import StatCard from "./components/CounterCard";
 import BlogCard from "./components/UserCard";
-import Carousel from "./components/Carousel";
+import SlidingCarousel from "./components/Carousel";
 
 const cardContent = [
   {
@@ -46,7 +46,7 @@ const statContent = [
   },
 ];
 
-export const marketingContent = [
+const marketingContent = [
   {
     id: 1,
     title: "Creating Streamlined Safeguarding Processes with OneRen.",
@@ -72,20 +72,20 @@ export default function Home() {
     <div className="space-y-10 dark:bg-background">
       {/* Hero Section */}
       <section>
-        <Carousel />
+        <SlidingCarousel />
       </section>
 
-      {/* Our Clients Section*/}
-      <section className="px-20 md:px-36 space-y-4">
+      {/* Our Clients Section */}
+      <section className="px-12 sm:px-20 md:px-36  space-y-4">
         <div className="text-center space-y-2">
-          <h1 className="text-neutral-dGrey text-1 font-semibold text-4xl">
+          <h1 className="text-neutral-dGrey text-1 font-semibold md:text-4xl text-3xl">
             Our Clients
           </h1>
-          <p className="text-neutral-grey font-light text-lg">
+          <p className="text-neutral-grey font-light md:text-lg text-base">
             We have been working with some Fortune 500+ clients
           </p>
         </div>
-        <div className="flex flex-row items-center w-100 justify-between flex-wrap mt-5">
+        <div className="flex flex-row items-center w-100 justify-between flex-wrap mt-5 gap-2">
           {[1, 2, 3, 4, 5, 6, 7].map((value) => (
             <Image
               src={`/clients/client${value}.svg`}
@@ -93,14 +93,15 @@ export default function Home() {
               height={48}
               alt={`client-${value}`}
               key={value}
+              className="w-8 md:w-auto"
             />
           ))}
         </div>
       </section>
       {/* CTA Section */}
-      <section className="px-20 md:px-36 text-center py-5">
+      <section className="px-12 sm:px-20 md:px-36 text-center py-5">
         <div>
-          <h1 className="text-neutral-dGrey font-semibold text-4xl">
+          <h1 className="text-neutral-dGrey font-semibold md:text-4xl text-3xl">
             Manage your entire community <br /> in a single system
           </h1>
           <p className="text-neutral-grey text-base mt-2">
@@ -114,17 +115,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Hero Section */}
-      <section className="px-20 md:px-36 flex lg:flex-row flex-col lg:justify-between justify-center items-center">
+      {/* Story Section */}
+      <section className="px-12 sm:px-20 md:px-36 flex lg:flex-row flex-col lg:justify-between justify-center items-center">
         <Image
           src="/pixelgrade.svg"
           width={400}
           height={400}
           alt="hero section"
-          className="w-2/5 h-full"
+          className="lg:w-2/5 h-full"
         />
-        <div className="w-3/5">
-          <h1 className="text-neutral-dGrey font-semibold text-4xl">
+        <div className="lg:w-3/5">
+          <h1 className="text-neutral-dGrey font-semibold md:text-4xl text-3xl">
             The unseen of spending three&nbsp; <br />
             years at Pixelgrade
           </h1>
@@ -140,10 +141,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="px-20 md:px-36 flex lg:flex-row flex-col lg:justify-between justify-start lg:items-center py-20 bg-neutral-silver">
+      {/* Statistics */}
+      <section className="px-12 sm:px-20 md:px-36 flex lg:flex-row flex-col lg:justify-between justify-start lg:items-center py-20 bg-neutral-silver">
         <div>
-          <h1 className="text-neutral-dGrey font-semibold text-4xl">
+          <h1 className="text-neutral-dGrey font-semibold md:text-4xl text-3xl">
             Helping a local&nbsp; <br />
             business reinvent itself
           </h1>
@@ -151,9 +152,9 @@ export default function Home() {
             We reached here with our hardwork and dedication.
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-x-8 gap-y-10 ">
+        <div className="grid md:grid-cols-2 gap-x-8 gap-y-10 grid-cols-1 items-center mt-4">
           {statContent.map((card) => (
-            <div key={card.title} className="min-w-64">
+            <div key={card.title} className="lg:min-w-64 w-full">
               <StatCard {...card} />
             </div>
           ))}
@@ -161,17 +162,17 @@ export default function Home() {
       </section>
 
       {/* Info Section */}
-      <section className="px-20 md:px-36 flex lg:flex-row flex-col lg:justify-between justify-center items-center column-gap-3 py-8">
+      <section className="px-12 sm:px-20 md:px-36 flex lg:flex-row flex-col lg:justify-between justify-center items-center column-gap-3 py-8">
         <Image
           src="/useImg.svg"
-          width={0}
-          height={0}
+          width={400}
+          height={400}
           alt="use-Img"
-          className="w-2/5 h-auto"
+          className="lg:w-2/5 h-full"
         />
-        <div className="space-y-4 w-3/5">
+        <div className="space-y-4 lg:w-3/5 mt-4">
           <div>
-            <h1 className="text-neutral-dGrey font-semibold text-4xl">
+            <h1 className="text-neutral-dGrey font-semibold md:text-4xl text-3xl">
               How to design your site footer like&nbsp;we did ?
             </h1>
             <p className="text-neutral-grey text-base mt-2">
@@ -191,15 +192,15 @@ export default function Home() {
       </section>
 
       {/* Meet our customers */}
-      <section className="px-20 md:px-36 flex lg:flex-row flex-col lg:justify-between justify-center items-center gap-3 bg-neutral-silver gap-x-3 py-8">
+      <section className="px-12 sm:px-20 md:px-36 flex lg:flex-row flex-col lg:justify-between justify-center items-center gap-3 bg-neutral-silver gap-x-3 py-8">
         <Image
           src="/feedback.png"
           width={326}
           height={326}
           alt="feedback"
-          className="w-1/3 h-full"
+          className="lg:w-1/3 h-full w-full"
         />
-        <div className="space-y-4 w-2/3">
+        <div className="space-y-4 lg:w-2/3 w-full">
           <p className="text-neutral-grey text-base mt-2">
             Maecenas dignissim justo eget nulla rutrum molestie. Maecenas
             lobortis sem dui, vel rutrum risus tincidunt ullamcorper. Proin eu
@@ -220,14 +221,15 @@ export default function Home() {
               British Dragon Boat Racing Association
             </p>
           </div>
-          <div className="flex sm:flex-row flex-col justify-between lg:items-center items-start">
+          <div className="flex flex-row flex-wrap justify-between items-center gap-y-4">
             {[1, 2, 3, 4, 5, 6, 7].map((value) => (
               <Image
-                src={`/Clients/client${value}.svg`}
+                src={`/clients/client${value}.svg`}
                 width={48}
                 height={48}
                 alt={`client-${value}`}
                 key={value}
+                className="w-8 h-8"
               />
             ))}
             <div className="flex items-center justify-center text-center">
@@ -253,28 +255,28 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="px-20 md:px-36 text-center pt-8 pb-32">
+      <section className="px-12 sm:px-20 md:px-36 text-center pt-8 pb-32">
         <div>
-          <h1 className="text-neutral-dGrey font-semibold text-4xl">
+          <h1 className="text-neutral-dGrey font-semibold md:text-4xl text-3xl">
             Caring is the new marketing
           </h1>
-          <p className="text-neutral-grey text-base mt-2">
+          <p className="text-neutral-grey md:text-base text-sm mt-2">
             The Nexcent blog is the best place to read about the latest
             membership insights, trends and more. <br /> See who&lsquo;s joining
             the community, read about how our community are <br /> increasing
             their membership income and lot&lsquo;s more.
           </p>
         </div>
-        <div className="mt-4 flex lg:flex-row flex-col justify-between align-items-center gap-3 column-gap-5 ">
+        <div className="mt-4 flex lg:flex-row flex-col justify-between align-items-center gap-x-3 gap-y-32 ">
           {marketingContent.map((item) => (
             <BlogCard key={item.id} {...item} />
           ))}
         </div>
       </section>
 
-      {/* Book A Demo */}
+      {/* Demo */}
       <section className="text-center bg-neutral-silver mt-5 py-12 dark:text-white">
-        <h1 className="font-bold text-6xl w-full">
+        <h1 className="font-semibold lg:text-6xl w-full md:text-4xl text-2xl">
           Pellentesque suscipit
           <br />
           fringilla libero eu.
