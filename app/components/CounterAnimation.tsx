@@ -65,7 +65,9 @@ const CounterAnimation = ({
 
   return (
     <div ref={elementRef}>
-      <h2 className="font-bold text-2xl text-neutral-dGrey">{count}</h2>
+      <h2 className="font-bold text-2xl text-neutral-dGrey">
+        {count.toLocaleString()}
+      </h2>
     </div>
   );
 };
